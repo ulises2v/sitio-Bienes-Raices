@@ -1,5 +1,12 @@
 html {
     font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
 }
 
 body {
@@ -64,10 +71,12 @@ h4 {
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 700;
+    font-size: 1.8rem;
     padding: 1rem 3rem;
     display: inline-block;
-    margin-top: 2rem;
+    margin-top: 3rem;
     text-align: center;
+    border-radius: 3rem;
 }
 
 .btn-naranja {
@@ -173,6 +182,22 @@ h4 {
     font-weight: 700;
 }
 
+.iconos-caracteristicas {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin-top: 3rem;
+}
+
+.iconos-caracteristicas li {
+    list-style: none;
+    display: flex;
+}
+
+.iconos-caracteristicas li img {
+    margin-right: 1.5rem;
+}
+
 .ver-todas {
     text-align: end;
 }
@@ -180,13 +205,131 @@ h4 {
 
 /*CONTACTO*/
 
-.contacto {
+.imagen-contacto {
     background-image: url(../img/encuentra.jpg);
     height: 40rem;
     background-position: center;
     background-size: cover;
+    display: flex;
+    align-items: center;
+    color: white;
 }
 
-.contenido-contacto {
+.contenido-contacto h2 {
+    margin-top: 0;
+}
+
+.contenido-contacto p {
+    font-size: 2rem;
+}
+
+
+/*INFERIOR*/
+
+.inferior {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inferior .blog {
+    flex-basis: 60%;
+}
+
+.inferior .testimoniales {
+    flex-basis: calc(40% - 2rem);
+}
+
+
+/*BLOG*/
+
+.entrada-blog {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.entrada-blog:last-of-type {
+    margin: 0;
+}
+
+.entrada-blog .imagen-art {
+    flex-basis: 40%;
+}
+
+.entrada-blog .texto-entrada {
+    flex-basis: calc(60% - 3rem);
+}
+
+.texto-entrada a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+.texto-entrada h4 {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.texto-entrada h4::after {
+    content: '';
+    display: block;
+    width: 15rem;
+    height: 0.5rem;
+    background-color: rgb(140, 204, 44);
+}
+
+.texto-entrada span {
+    color: orange;
+}
+
+
+/*TESTIMONIALES*/
+
+.contenido-test {
+    background-color: dodgerblue;
+    color: white;
+    font-size: 2rem;
+    padding: 3rem;
+    border-radius: 2rem;
+}
+
+.contenido-test blockquote {
+    margin: 0;
+    font-weight: 300;
+    padding-left: 5rem;
+    position: relative;
+}
+
+.contenido-test blockquote::before {
+    content: '';
+    display: block;
+    height: 5rem;
+    width: 4rem;
+    background-image: url(../img/comilla.svg);
+    position: absolute;
+    left: -.5rem;
+    top: -1rem;
+}
+
+.contenido-test p {
+    text-align: end;
+}
+
+
+/*FOOTER*/
+
+.footer {
+    background-color: #333;
+}
+
+.contenido-footer {
+    padding: 3rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.copyr {
+    margin: 0;
     color: white;
 }

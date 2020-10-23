@@ -324,6 +324,7 @@ h4 {
 
 .contenido-footer {
     padding: 3rem 0;
+    margin-top: 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
